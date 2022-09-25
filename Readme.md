@@ -49,7 +49,9 @@ Attributes helps to design our custom classes more flexible
     }
 
 XrmMapper Usage
+
 Please check examples in github repository to detailed description
+
 Basic Usages :
 
 Mapping
