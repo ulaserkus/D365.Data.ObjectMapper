@@ -51,13 +51,16 @@ Attributes helps to design our custom classes more flexible
 XrmMapper Usage
 Please check examples in github repository to detailed description
 Basic Usages :
+
 Mapping
 
 EntityCollection entityCollection = _orgService.RetrieveMultiple(query);
 List<Contact> contacts = XrmMapper.Map<List<Contact>>(entityCollection);
 Entity entity = _orgService.Retrieve("contact", Guid.Parse("{5230B95E-1BD3-EC11-A7B5-000D3A4A5AA4}"), new ColumnSet(true));
 Contact contact = XrmMapper.Map<Contact>(entity);
+
 Parsing
+    
 Entity contactEntity = contact.ParseToEntity() as Entity;
 List<Entity> contactEntityList=contactsList.Select(ct => ct.ParseToEntity() as Entity).ToList();
 
