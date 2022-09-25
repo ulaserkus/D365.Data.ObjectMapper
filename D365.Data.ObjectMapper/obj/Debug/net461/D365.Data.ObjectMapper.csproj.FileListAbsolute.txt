@@ -1,0 +1,12 @@
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\bin\Debug\net461\D365.Data.ObjectMapper.dll
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\bin\Debug\net461\D365.Data.ObjectMapper.pdb
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net461\D365.Data.ObjectMapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net461\D365.Data.ObjectMapper.AssemblyInfoInputs.cache
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net461\D365.Data.ObjectMapper.AssemblyInfo.cs
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net461\D365.Data.ObjectMapper.csproj.CoreCompileInputs.cache
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net461\D365.Data.ObjectMapper.dll
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net461\D365.Data.ObjectMapper.pdb
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\bin\Debug\net461\D365.Data.ObjectMapper.xml
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net461\D365.Data.ObjectMapper.Properties.Resources.resources
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net461\D365.Data.ObjectMapper.csproj.GenerateResource.cache
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net461\D365.Data.ObjectMapper.csproj.AssemblyReference.cache

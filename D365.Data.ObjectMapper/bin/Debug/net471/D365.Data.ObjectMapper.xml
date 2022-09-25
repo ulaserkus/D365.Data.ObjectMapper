@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>D365.Data.ObjectMapper</name>
+    </assembly>
+    <members>
+        <member name="T:D365.Data.ObjectMapper.Attributes.MapFromAttribute">
+            <summary>
+            <para>This Attribute Maps From Specified Entity Attribute Values To Class Property</para>
+            <para>You Can Use Any Type But Custom Class Property Type Need To Same Entity Attribute Type</para>
+            </summary>
+        </member>
+        <member name="T:D365.Data.ObjectMapper.Attributes.MoneyAsDecimalAttribute">
+            <summary>
+            <para>This Attribute parse Money Object's Value Property To Class Property</para>
+            <para>Class Property Type Must Be Decimal</para>
+            </summary>
+        </member>
+        <member name="T:D365.Data.ObjectMapper.Attributes.OptionSetAsIntAttribute">
+            <summary>
+            <para>This Attribute Parse OptionSetValue Object's Value Property To Class Property</para>
+            <para>Class Property Type Must Be Int</para>
+            </summary>
+        </member>
+        <member name="T:D365.Data.ObjectMapper.Attributes.PrimaryKeyAttribute">
+            <summary>
+            <para>This Attribute Maps From Entity Object's Id Property To Class Property</para>
+            <para>Class Property Type Must Be Guid And Unique Use Only Once Per Class</para>
+            </summary>
+        </member>
+        <member name="T:D365.Data.ObjectMapper.Attributes.ReferenceAttribute">
+            <summary>
+            <para>This Attribute Maps From EntityReference Object's Id Property To Class Property</para>
+            <para>Used Property Type Must Be Guid</para>
+            </summary>
+        </member>
+        <member name="T:D365.Data.ObjectMapper.Attributes.SchemaAttribute">
+            <summary>
+            <para>This Attribute Specifies your Entity Schema Name</para>
+            </summary>
+        </member>
+        <member name="T:D365.Data.ObjectMapper.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:D365.Data.ObjectMapper.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:D365.Data.ObjectMapper.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:D365.Data.ObjectMapper.Properties.Resources.D365_Data_ObjectMapper">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+            &lt;doc&gt;
+                &lt;assembly&gt;
+                    &lt;name&gt;D365.Data.ObjectMapper&lt;/name&gt;
+                &lt;/assembly&gt;
+                &lt;members&gt;
+                    &lt;member name=&quot;T:D365.Data.ObjectMapper.Attributes.MapFromAttribute&quot;&gt;
+                        &lt;summary&gt;
+                        &lt;para&gt;This Attribute Maps From Specified Entity Attribute Values To Class Property&lt;/para&gt;
+                        &lt;para&gt;You Can Use Any Type But Custom Class Property Type Need To Same Entity Attribute Type&lt;/para&gt;
+                        &lt;/summary&gt;
+                    &lt;/member&gt;
+                    &lt;member name=&quot;T:D365. [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="M:D365.Data.ObjectMapper.XrmMapper.Map``1(System.Object)">
+            <summary>
+            <para>This Method Mapping Microsoft.Xrm.Sdk.Entity Or Microsoft.Xrm.Sdk.EntityCollection To Your Custom Classes or Generic Collections</para>
+            </summary>
+        </member>
+        <member name="M:D365.Data.ObjectMapper.XrmMapper.ParseToEntity(System.Object)">
+            <summary>
+            <para>This Method Parsing Your Custom Classes To Microsoft.Xrm.Sdk.Entity</para>
+            <para>Target Not Accept Collections It Will Throw Error </para>
+            </summary>
+        </member>
+    </members>
+</doc>

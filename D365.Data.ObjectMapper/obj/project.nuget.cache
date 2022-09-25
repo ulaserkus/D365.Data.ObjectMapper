@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gh4Ci8gJow+YW0ZdieJ++5+SqV96EkosPzNdm0Vn/96SWzeGA4HbLWw3JH3JQTNfAXN+PT1MZE0m3vGaogF8bQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ulas\\source\\repos\\D365.Data.ObjectMapper\\D365.Data.ObjectMapper\\D365.Data.ObjectMapper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ulas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ulas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

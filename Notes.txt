@@ -1,0 +1,24 @@
+-Geliþtirme Günlükleri
+sign : ^o^ ^o^
+      ^o^   ///Bats are bad  ***started by ulaþ erkuþ**
+
+      -->þema adýna göre otomatik mapleme yapýldý.
+      -->MapFrom attribute içerisinde belirtilen field deðerine göre mapleme yapýldý.
+      -->PrimaryKeyAtribute'u otomatik entity Ýd'sini alacak þekilde düzenlendi.
+      -->EntityTable Attribute ile entity adý sýnýflarda belirlenebilir.
+
+      --> Örnek kullanýmlar : 
+      
+      -EntityCollectionda bir generic dizine çevirme
+        EntityCollection collection = orgService.RetrieveMultiple(query);
+        List<Contacts> contacts = XrmMapper.MapFromEntityOrEntityCollection<List<Contacts>>(collection);
+
+      -Olan bir generic dizinden Entity dizinine çevirme
+        List<Entity> entities = contacts.Select(x => x.ParseToEntity<Entity>()).ToList();
+
+      -Entity kaydýndan custom objeye map
+         Entity entity = orgService.Retrieve("contact", Guid.Parse("E3058C45-7137-ED11-9DB1-000D3A2E4645"), new Microsoft.Xrm.Sdk.Query.ColumnSet(true));
+          Contacts contact2 = XrmMapper.MapFromEntityOrEntityCollection<Contacts>(entity);
+
+      -Custom objeden Entity'ye map
+          Entity ent = contact2.ParseToEntity<Entity>();

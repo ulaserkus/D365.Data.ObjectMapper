@@ -1,0 +1,5 @@
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net40\D365.Data.ObjectMapper.csproj.AssemblyReference.cache
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net40\D365.Data.ObjectMapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net40\D365.Data.ObjectMapper.AssemblyInfoInputs.cache
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net40\D365.Data.ObjectMapper.AssemblyInfo.cs
+C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\obj\Debug\net40\D365.Data.ObjectMapper.csproj.CoreCompileInputs.cache
