@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+ <PropertyGroup>
+   <TargetFrameworks>
+			netstandard2.0;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48
+		</TargetFrameworks>
+		<Version>1.0.1</Version>
+		<Title>XrmMapper</Title>
+		<Authors>Ulaş Erkuş</Authors>
+		<PackageProjectUrl>https://github.com/ulaserkus/D365.Data.ObjectMapper.git</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageVersion>1.0.1</PackageVersion>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageId>D365.Data.ObjectMapper</PackageId>
+		<Copyright>Copyrigth 2022</Copyright>
+		<PackageReleaseNotes>XrmMapper improved for Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection mapping and parsing </PackageReleaseNotes>
+		<PackageTags>Mapper,Converter,XrmMapper,Dynamics365</PackageTags>
+		<Description>This library helps about Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection objects convert to your custom class objects and generic collections like list,hashset,queue,stack or collection and parse your custom class objects to Microsoft.Xrm.Sdk.Entity.Library designed for only Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection mapping and parsing</Description>
+		<RepositoryUrl>https://github.com/ulaserkus/D365.Data.ObjectMapper.git</RepositoryUrl>
+		<NeutralLanguage />
+		<RepositoryType>git</RepositoryType>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+ <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+   <DocumentationFile>C:\Users\ulas\source\repos\D365.Data.ObjectMapper\D365.Data.ObjectMapper\D365.Data.ObjectMapper.xml</DocumentationFile>
+ </PropertyGroup>
+
+ <ItemGroup>
+   <Compile Update="Properties\Resources.Designer.cs">
+     <DesignTime>True</DesignTime>
+     <AutoGen>True</AutoGen>
+     <DependentUpon>Resources.resx</DependentUpon>
+   </Compile>
+ </ItemGroup>
+
+ <ItemGroup>
+   <EmbeddedResource Update="Properties\Resources.resx">
+     <Generator>ResXFileCodeGenerator</Generator>
+     <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+   </EmbeddedResource>
+ </ItemGroup>
+
+ <ItemGroup>
+   <None Update="D365.Data.ObjectMapper.xml">
+     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+   </None>
+ </ItemGroup>
+
+</Project>
