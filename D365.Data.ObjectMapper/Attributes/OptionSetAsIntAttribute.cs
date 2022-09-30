@@ -38,10 +38,10 @@ namespace D365.Data.ObjectMapper.Attributes
             {
                 foreach (var ass in assemblies)
                 {
-                    Type type = ass.GetTypes().Where(x => x.Name == callerClassName).FirstOrDefault();
+                    List<Type> type = ass.GetTypes().Where(x => x.Name == callerClassName).ToList();
 
-                    if (type != null)
-                        types.Add(type);
+                    if (type != null && type.Count > 0)
+                        types.AddRange(type);
                 }
             }
 
