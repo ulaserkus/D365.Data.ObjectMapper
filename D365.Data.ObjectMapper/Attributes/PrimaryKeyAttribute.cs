@@ -32,45 +32,47 @@ namespace D365.Data.ObjectMapper.Attributes
             if (assembly3 != null)
                 assemblies.Add(assembly3);
 
-            Type type = null;
+            List<Type> types = new List<Type>();
 
             foreach (var ass in assemblies)
             {
-                type = ass.GetTypes().Where(x => x.Name == callerClassName).FirstOrDefault();
+                Type type = ass.GetTypes().Where(x => x.Name == callerClassName).FirstOrDefault();
 
                 if (type != null)
-                    break;
+                    types.Add(type);
             }
 
-            if (type != null)
+            if (types != null && types.Count > 0)
             {
-                int primaryKeyAttributeCount = 0;
-                var customAttributes = type.GetProperties().Select(x => x.CustomAttributes);
-
-                customAttributes.ToList().ForEach(y =>
+                foreach (var type in types)
                 {
-                    primaryKeyAttributeCount += y.Where(x => x.AttributeType.Name == "PrimaryKeyAttribute").ToList().Count;
-                });
-
-                if (primaryKeyAttributeCount > 1)
-                {
-                    throw new TargetParameterCountException("You can't use PrimaryKeyAttribute over than 1 in a same object");
-                }
-
-                foreach (var prop in type.GetProperties().ToList())
-                {
-                    IEnumerable<CustomAttributeData> customAttributeDatas = prop.CustomAttributes;
-
-                    var primaryKeyAttributes = customAttributeDatas.Where(x => x.AttributeType.Name == "PrimaryKeyAttribute").ToList();
-
-                    if (primaryKeyAttributes != null && primaryKeyAttributes.Count == 1)
+                    int primaryKeyAttributeCount = 0;
+                    var customAttributes = type.GetProperties().Select(x => x.CustomAttributes);
+                    customAttributes.ToList().ForEach(y =>
                     {
-                        if (typeof(Guid) != prop.PropertyType)
-                        {
-                            throw new InvalidCastException("PrimaryKeyAttribute property type must be Guid");
-                        }
+                        primaryKeyAttributeCount += y.Where(x => x.AttributeType.Name == "PrimaryKeyAttribute").ToList().Count;
+                    });
+
+                    if (primaryKeyAttributeCount > 1)
+                    {
+                        throw new TargetParameterCountException("You can't use PrimaryKeyAttribute over than 1 in a same object");
                     }
 
+                    foreach (var prop in type.GetProperties().ToList())
+                    {
+                        IEnumerable<CustomAttributeData> customAttributeDatas = prop.CustomAttributes;
+
+                        var primaryKeyAttributes = customAttributeDatas.Where(x => x.AttributeType.Name == "PrimaryKeyAttribute").ToList();
+
+                        if (primaryKeyAttributes != null && primaryKeyAttributes.Count > 0)
+                        {
+                            if (typeof(Guid) != prop.PropertyType)
+                            {
+                                throw new InvalidCastException("PrimaryKeyAttribute property type must be Guid");
+                            }
+                        }
+
+                    }
                 }
             }
         }

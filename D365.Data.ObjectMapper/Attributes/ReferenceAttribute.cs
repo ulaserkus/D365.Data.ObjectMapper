@@ -27,7 +27,7 @@ namespace D365.Data.ObjectMapper.Attributes
             var assembly1 = Assembly.GetEntryAssembly();
             if (assembly1 != null)
                 assemblies.Add(assembly1);
-            
+
             var assembly2 = Assembly.GetExecutingAssembly();
             if (assembly2 != null)
                 assemblies.Add(assembly2);
@@ -36,32 +36,38 @@ namespace D365.Data.ObjectMapper.Attributes
             if (assembly3 != null)
                 assemblies.Add(assembly3);
 
-            Type type = null;
+            List<Type> types = new List<Type>();
 
-            foreach (var ass in assemblies)
+            if (assemblies != null && assemblies.Count > 0)
             {
-                type = ass.GetTypes().Where(x => x.Name == callerClassName).FirstOrDefault();
-               
-                if (type != null)
-                    break;
+                foreach (var ass in assemblies)
+                {
+                    Type type = ass.GetTypes().Where(x => x.Name == callerClassName).FirstOrDefault();
+
+                    if (type != null)
+                        types.Add(type);
+                }
             }
 
-            if (type != null)
+            if (types != null && types.Count > 0)
             {
-                foreach (var prop in type.GetProperties().ToList())
+                foreach (Type type in types)
                 {
-                    IEnumerable<CustomAttributeData> customAttributeDatas = prop.CustomAttributes;
-
-                    var primaryKeyAttributes = customAttributeDatas.Where(x => x.AttributeType.Name == "ReferenceAttribute").ToList();
-
-                    if (primaryKeyAttributes != null && primaryKeyAttributes.Count == 1)
+                    foreach (var prop in type.GetProperties().ToList())
                     {
-                        if (typeof(Guid) != prop.PropertyType)
-                        {
-                            throw new InvalidCastException("ReferenceAttribute property type must be Guid");
-                        }
-                    }
+                        IEnumerable<CustomAttributeData> customAttributeDatas = prop.CustomAttributes;
 
+                        var KeyAttributes = customAttributeDatas.Where(x => x.AttributeType.Name == "ReferenceAttribute").ToList();
+
+                        if (KeyAttributes != null && KeyAttributes.Count > 0)
+                        {
+                            if (typeof(decimal) != prop.PropertyType)
+                            {
+                                throw new InvalidCastException("ReferenceAttribute property type must be Guid");
+                            }
+                        }
+
+                    }
                 }
             }
         }
