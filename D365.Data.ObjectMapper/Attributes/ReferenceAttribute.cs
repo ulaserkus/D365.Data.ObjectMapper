@@ -61,7 +61,7 @@ namespace D365.Data.ObjectMapper.Attributes
 
                         if (KeyAttributes != null && KeyAttributes.Count > 0)
                         {
-                            if (typeof(decimal) != prop.PropertyType)
+                            if (typeof(Guid) != prop.PropertyType)
                             {
                                 throw new InvalidCastException("ReferenceAttribute property type must be Guid");
                             }

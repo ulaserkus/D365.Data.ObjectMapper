@@ -19,7 +19,6 @@ namespace Example.WithAttributes
         public Example()
         {
             CrmServiceClient crmServiceClient = new CrmServiceClient(@"<Enter the CrmServiceClient connectionstring>");
-
             //ref link to connection string : https://learn.microsoft.com/en-us/power-apps/developer/data-platform/xrm-tooling/use-connection-strings-xrm-tooling-connect
 
             _orgService = (IOrganizationService)crmServiceClient.OrganizationWebProxyClient != null ? (IOrganizationService)crmServiceClient.OrganizationWebProxyClient : (IOrganizationService)crmServiceClient.OrganizationServiceProxy;

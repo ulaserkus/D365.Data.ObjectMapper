@@ -57,7 +57,7 @@ namespace D365.Data.ObjectMapper.Attributes
 
                         if (KeyAttributes != null && KeyAttributes.Count > 0)
                         {
-                            if (typeof(decimal) != prop.PropertyType)
+                            if (typeof(int) != prop.PropertyType)
                             {
                                 throw new InvalidCastException("OptionSetAsIntAttribute property type must be int");
                             }

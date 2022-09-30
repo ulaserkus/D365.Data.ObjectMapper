@@ -4,18 +4,18 @@
    <TargetFrameworks>
 			netstandard2.0;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48
 		</TargetFrameworks>
-		<Version>1.0.2</Version>
+		<Version>1.0.1.1</Version>
 		<Title>XrmMapper</Title>
 		<Authors>Ulaş Erkuş</Authors>
 		<PackageProjectUrl>https://github.com/ulaserkus/D365.Data.ObjectMapper.git</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageVersion>1.0.2</PackageVersion>
+		<PackageVersion>1.0.1.1</PackageVersion>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageId>D365.Data.ObjectMapper</PackageId>
 		<Copyright>Copyrigth 2022</Copyright>
 		<PackageReleaseNotes>-XrmMapper improved for Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection mapping and parsing 
 -Atrributes Error Fixed</PackageReleaseNotes>
-		<PackageTags>Mapper,Converter,XrmMapper,Dynamics365</PackageTags>
+		<PackageTags>Mapper,Converter,XrmMapper,Dynamics365,Crm365,CrmMapper,EntityMapper</PackageTags>
 		<Description>This library helps about Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection objects convert to your custom class objects and generic collections like list,hashset,queue,stack or collection and parse your custom class objects to Microsoft.Xrm.Sdk.Entity.Library designed for only Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection mapping and parsing</Description>
 		<RepositoryUrl>https://github.com/ulaserkus/D365.Data.ObjectMapper.git</RepositoryUrl>
 		<NeutralLanguage />
