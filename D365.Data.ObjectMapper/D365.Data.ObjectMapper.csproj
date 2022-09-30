@@ -13,7 +13,8 @@
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageId>D365.Data.ObjectMapper</PackageId>
 		<Copyright>Copyrigth 2022</Copyright>
-		<PackageReleaseNotes>XrmMapper improved for Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection mapping and parsing </PackageReleaseNotes>
+		<PackageReleaseNotes>-XrmMapper improved for Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection mapping and parsing 
+-Atrributes Error Fixed</PackageReleaseNotes>
 		<PackageTags>Mapper,Converter,XrmMapper,Dynamics365</PackageTags>
 		<Description>This library helps about Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection objects convert to your custom class objects and generic collections like list,hashset,queue,stack or collection and parse your custom class objects to Microsoft.Xrm.Sdk.Entity.Library designed for only Microsoft.Xrm.Sdk.Entity or Microsoft.Xrm.Sdk.EntityCollection mapping and parsing</Description>
 		<RepositoryUrl>https://github.com/ulaserkus/D365.Data.ObjectMapper.git</RepositoryUrl>
