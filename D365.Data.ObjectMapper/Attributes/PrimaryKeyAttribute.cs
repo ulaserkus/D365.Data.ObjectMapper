@@ -18,28 +18,19 @@ namespace D365.Data.ObjectMapper.Attributes
         {
             string callerClassName = Path.GetFileNameWithoutExtension(filePath);
 
-            List<Assembly> assemblies = new List<Assembly>();
-
-            var assembly1 = Assembly.GetEntryAssembly();
-            if (assembly1 != null)
-                assemblies.Add(assembly1);
-
-            var assembly2 = Assembly.GetExecutingAssembly();
-            if (assembly2 != null)
-                assemblies.Add(assembly2);
-
-            var assembly3 = Assembly.GetCallingAssembly();
-            if (assembly3 != null)
-                assemblies.Add(assembly3);
+            Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
             List<Type> types = new List<Type>();
 
-            foreach (var ass in assemblies)
+            if(assemblies != null && assemblies.Length > 0)
             {
-                List<Type> type = ass.GetTypes().Where(x => x.Name == callerClassName).ToList();
+                foreach (var ass in assemblies)
+                {
+                    List<Type> type = ass.GetTypes().Where(x => x.Name == callerClassName).ToList();
 
-                if (type != null && type.Count>0)
-                    types.AddRange(type);
+                    if (type != null && type.Count > 0)
+                        types.AddRange(type);
+                }
             }
 
             if (types != null && types.Count > 0)
